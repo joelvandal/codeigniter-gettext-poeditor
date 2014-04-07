@@ -34,4 +34,10 @@ $string = _("This is a test string");
 ```
 
 
+If you want to use RTL support, it can be simple as :
+
+```php
+ <body class="navbar-fixed <?php if ($this->languages->isRTL()) { echo 'rtl'; } ?>">
+```
+
 [Joel Vandal - CodeIgniter Gettext POEditor Library](http://joel.vandal.ca/)
