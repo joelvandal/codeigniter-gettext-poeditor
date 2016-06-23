@@ -216,8 +216,9 @@ class Languages {
 	    return false;
 	}
     
+    $file = class_exists('CurlFile', false) ? new CURLFile($pofile, 'application/octet-stream') : "@{$pofile}"; // PHP 5.5 dropped support for the ‘@’ in CURL params 
 	$params  = array('id'         => $project,
-			 'file'       =>  '@' . $pofile,
+			 'file'       =>  $file,
 			 'updating'   => 'terms',
 			 'sync_terms' => 1);
 	
