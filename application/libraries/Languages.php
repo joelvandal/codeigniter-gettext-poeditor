@@ -160,7 +160,7 @@ class Languages {
     function POEditor_Extract() {
 	$path   = FCPATH;
 	$pofile = APPPATH.$this->config['gettext_locale_dir'] . DIRECTORY_SEPARATOR . $this->CI->config->item('domain') . '.pot';
-	$cmd = "cd /tmp ; echo '' > messages.po ; find $path -type f -iname \"*.php\" | xgettext --keyword=_ --keyword=_e -j -f - ; mv messages.po $pofile";
+	$cmd = "cd /tmp ; echo '' > messages.po ; find $path -type f -iname \"*.php\" | xgettext --from-code=" . $this->config['gettext_catalog_codeset'] . " --keyword=_ --keyword=_e -j -f - ; mv messages.po $pofile";
 	exec($cmd);
     }
     
