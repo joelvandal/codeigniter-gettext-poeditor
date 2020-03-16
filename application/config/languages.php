@@ -5,7 +5,7 @@
  **/
 
 $config['poeditor']['apikey']    = 'YOUR_API_KEY';
-$config['poeditor']['apiurl']    = 'http://poeditor.com/api/';
+$config['poeditor']['apiurl']    = 'https://poeditor.com/api/';
 $config['poeditor']['projectID'] = 'YOUR_PROJECT_ID';
 
 
